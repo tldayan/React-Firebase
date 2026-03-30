@@ -1,0 +1,188 @@
+.mainContainer {
+  width: 60%;
+  height: 70vh;
+  margin: 100px auto;
+  border-radius: 15px;
+  padding: 20px;
+  border: 1px solid rgba(126, 126, 126, 0.53);
+  background-color:  rgba(33, 33, 33, 0.53)
+}
+
+.title {
+  color: white;
+  text-align: center;
+}
+
+.taskForm {
+  margin-bottom: 20px;
+  width: 60%;
+  margin: 0 auto;
+/*   border: 1px solid red; */
+  display: flex;
+  gap: 10px
+}
+.taskFormInput {
+/*   border: 1px solid red; */
+  width: 100%;
+  border-radius: 50px;
+    border: none;
+  outline: none;
+  text-indent: 10px;
+}
+
+.addButton {
+  padding: 8px 12px;
+  border-radius: 50px;
+  width: 100px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+.taskItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  gap: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+
+.taskTitle {
+  flex: 1;
+  font-weight: 500;
+  color: white;
+  word-break: break-word;
+}
+
+
+.taskInput {
+  flex: 1;
+  padding: 6px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+}
+
+
+.statusDropdown {
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.statusDropdown:hover {
+  border-color: #888;
+}
+
+.statusDropdown:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+}
+
+
+.editButton,
+.deleteButton,
+.saveButton,
+.cancelButton {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+.error {
+  color: red;
+  margin-top: 10px; 
+  text-align: center;
+}
+
+
+
+.editButton {
+  background-color: #007bff;
+  color: white;
+}
+
+
+.editButton:hover {
+  background-color: #0056b3;
+}
+
+
+
+.deleteButton {
+  background-color: #dc3545;
+  color: white;
+}
+
+.deleteButton:hover {
+  background-color: #a71d2a;
+}
+
+
+
+.saveButton {
+  background-color: #28a745;
+  color: white;
+}
+
+.saveButton:hover {
+  background-color: #1e7e34;
+}
+
+
+
+.cancelButton {
+  background-color: #6c757d;
+  color: white;
+}
+
+.cancelButton:hover {
+  background-color: #565e64;
+}
+
+
+.taskItem:hover {
+  background-color: #6c6b6b32;
+}
+
+
+.taskButtons button {
+  margin-left: 5px;
+}
+
+
+.filterButton {
+  margin-right: 8px;
+  padding: 6px 12px;
+  background-color: #f0f0f0;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+
+.filterButton:hover {
+  background-color: #e0e0e0;
+}
+
+
+.activeFilter {
+  background-color: #007bff;
+  color: #fff;
+}
