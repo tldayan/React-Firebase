@@ -39,7 +39,7 @@ const App: React.FC = () => {
 
       <TaskForm onAdd={addTask} />
 
-      <div style={{ margin: "10px 45px", color: "white" }}>
+      <div style={{ margin: "10px 45px", color: "white", flexWrap: "nowrap" }}>
         <strong>Todo:</strong> {counters.Todo} &nbsp;
         <strong>In Progress:</strong> {counters["In Progress"]} &nbsp;
         <strong>Done:</strong> {counters.Done}

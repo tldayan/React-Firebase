@@ -1,5 +1,5 @@
 .mainContainer {
-  width: clamp(95%, 60%, 50%);
+  width: clamp(98%, 60%, 50%);
   height: 70vh;
   margin: 100px auto;
   border-radius: 15px;
