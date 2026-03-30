@@ -1,21 +1,21 @@
 .mainContainer {
-  width: 60%;
+  width: clamp(95%, 60%, 50%);
   height: 70vh;
   margin: 100px auto;
   border-radius: 15px;
-  padding: 20px;
   border: 1px solid rgba(126, 126, 126, 0.53);
   background-color:  rgba(33, 33, 33, 0.53)
 }
 
 .title {
+  font-size: 1.2rem;
   color: white;
   text-align: center;
 }
 
 .taskForm {
   margin-bottom: 20px;
-  width: 60%;
+  width: clamp(65%, 60%, 50%);
   margin: 0 auto;
 /*   border: 1px solid red; */
   display: flex;
@@ -24,10 +24,33 @@
 .taskFormInput {
 /*   border: 1px solid red; */
   width: 100%;
+  height: 30px;
   border-radius: 50px;
-    border: none;
+  border: none;
   outline: none;
   text-indent: 10px;
+}
+
+
+.taskList {
+  max-height: 50vh; 
+  overflow-y: auto; 
+  padding-right: 5px; 
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0,0,0,0.2) transparent;
+}
+
+.taskList::-webkit-scrollbar {
+  width: 6px;
+}
+
+.taskList::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 3px;
+}
+
+.taskList::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 .addButton {
@@ -44,17 +67,20 @@
 .taskItem {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  flex-direction: row;
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 8px;
   gap: 10px;
+  width: 95%;
+  margin: 10px auto;
   box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 }
 
 
 .taskTitle {
   flex: 1;
+  text-wrap: nowrap;
   font-weight: 500;
   color: white;
   word-break: break-word;
@@ -70,6 +96,11 @@
   font-size: 14px;
 }
 
+.sortList {
+  margin: 0px auto;
+/*   border: 1px solid red; */
+  width: 95%;
+}
 
 .statusDropdown {
   padding: 6px 10px;
@@ -110,8 +141,8 @@
 }
 
 .taskTime {
-  font-size: 1.2rem;
-  color: #888;
+  font-size: 1rem;
+  color: #e9e9e9;
 }
 
 .editButton {
@@ -188,4 +219,105 @@
 .activeFilter {
   background-color: #007bff;
   color: #fff;
+}
+
+
+.loaderContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+
+.loader {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+@media (max-width: 768px) {
+  .mainContainer {
+    width: 90%;
+    margin: 50px auto;
+    height: auto; 
+    padding: 15px;
+  }
+
+  .taskForm {
+    flex-direction: column; 
+    gap: 8px;
+  }
+
+  .taskFormInput {
+    width: 100%; 
+  }
+
+  .addButton {
+    width: 100%; 
+  }
+
+  .taskItem {
+    flex-direction: column; 
+    align-items: flex-start;
+    gap: 6px;
+    padding: 8px;
+  }
+
+  .taskTitle,
+  .taskInput {
+    width: 100%; 
+    font-size: 14px; 
+  }
+
+  .statusDropdown {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .taskButtons button {
+    margin-left: 0;
+    margin-top: 5px;
+    width: 100%;
+  }
+
+  .filterButton {
+    padding: 5px 8px;
+    margin-right: 5px;
+    font-size: 14px;
+  }
+
+  .taskTime {
+    font-size: 0.85rem;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .mainContainer {
+    margin: 30px auto;
+    padding: 10px;
+  }
+
+  .addButton {
+    font-size: 14px;
+  }
+
+  .filterButton {
+    font-size: 12px;
+    padding: 4px 6px;
+  }
 }

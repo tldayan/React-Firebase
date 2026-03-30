@@ -50,8 +50,11 @@ const TaskItem: React.FC<TaskItemProps> = ({ task, onUpdate, onDelete }) => {
         <>
           <span className={styles.taskTitle}>{task.title}</span>
            <span className={styles.taskTime}>
-              {new Date(task.createdAt).toLocaleString()}
-            </span>
+            {new Date(task.createdAt).toLocaleString(undefined, {
+              dateStyle: "short",
+              timeStyle: "short",
+            })}
+          </span>
           <select
             value={task.status}
             onChange={handleStatusChange}
